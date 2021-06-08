@@ -28,10 +28,13 @@
         content="Ingeniero en sistemas dedicado a desarrollar soluciones web y diseño de interfaces de usuario aplicando tecnologías de mayor auge.   ">
     <meta property="twitter:image"
         content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
-<body class="">
+<body>
+    <div class="h-screen bg-black px-10">
+        qwe
+    </div>
 </body>
 
 </html>
