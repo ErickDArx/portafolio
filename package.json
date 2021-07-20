@@ -27,6 +27,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "postcss-import": "^14.0.2"
+        "postcss-import": "^14.0.2",
+        "tailwindcss-filters": "^3.0.0"
     }
 }

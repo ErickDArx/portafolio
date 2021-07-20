@@ -1,14 +1,19 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
-  mode: 'jit',
-  purge: [
-    './resources/views/*.blade.php',
-  ],
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(20px)',
+      },
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-filters'),
+  ],
 }
