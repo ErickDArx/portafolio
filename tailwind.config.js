@@ -1,13 +1,18 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
   mode: 'jit',
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
   purge: [
     './public/*.html',
     './src/**/*.{js,jsx,ts,tsx,vue}',
   ],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Montserrat': ['"Montserrat"', 'sans-serif'],
+        'Poppins': ['"Poppins"', 'sans-serif'],
+      },
+    },
   },
   variants: {
     extend: {},

@@ -760,6 +760,12 @@ video {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
+.font-Montserrat {
+	font-family: "Montserrat", sans-serif;
+}
+.font-Poppins {
+	font-family: "Poppins", sans-serif;
+}
 .text-xl {
 	font-size: 1.25rem;
 	line-height: 1.75rem;

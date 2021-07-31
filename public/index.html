@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Erick Matamoros | Ingeniero en sistemas</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
+    <link rel="stylesheet" href="/dist/css/scroll.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 
 <body>
-    <header class="h-screen relative flex flex-col">
+
+    <header class="headline load-hiddden h-screen relative flex flex-col">
         <div class="py-9 relative sm:py-7">
-            <!-- <div class="absolute h-full w-full inset-0 bg-center bg-cover bg-no-repeat" style="background-image: url(https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)"></div> -->
+
         </div>
         <nav
             class="z-50 fixed top-0 right-0 left-0 text-gray-900 backdrop-blur-sm shadow-lg flex px-10 py-4 flex-row justify-between items-center font-Montserrat transition duration-75">
             <div class="absolute inset-0 bg-gray-200 opacity-30"></div>
-
             <div class="z-50"><a href="" title="ERICK" class="hover:underline">ERICK</a></div>
-
             <ul
                 class="z-50 hidden sm:flex flex-row justify-between gap-5 disabled:hidden invisible sm:visible sm:text-xs lg:text-xs">
                 <li>SOBRE MI</li>
@@ -50,48 +56,112 @@
 
         <main class="px-10 py-4 font-Montserrat relative select-none">
             <div class="absolute inset-0 bg-gray-900"></div>
-            <div class="text-gray-200 relative grid grid-cols-3 grid-rows-1">
-                <div class="col-span-2">
+            <div class="text-gray-200 relative grid grid-cols-3 grid-rows-1 items-center">
+
+                <div class="col-span-1 relative z-10">
                     <p>ANALIZAR</p>
                     <p>DESARROLLAR</p>
                     <p>IMPLEMENTAR</p>
                 </div>
-                <div class="bg-contain bg-no-repeat"
-                    style="background-image: url(https://raw.githubusercontent.com/ErickDArx/portafolio/5d0746acc0caa9f8744ddc089b7ca60f6b777245/5143537_adobespark.svg)">
 
+                <div class="slider col-span-2">
+
+                    <div class="slide-track">
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(http://assets.stickpng.com/thumbs/5847f5bdcef1014c0b5e489c.png);">
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(http://lineadecodigo.com/wp-content/uploads/2014/04/css.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/tailwind-css.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(http://codigofacilito.com/system/courses/white_avatars/000/000/076/medium/materialize.png?1461776253);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://redmine.cautivatech.com/redmine/attachments/download/747/js-logo-1.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(http://assets.stickpng.com/images/58482acecef1014c0b5e4a1e.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png);">
+                        </div>
+
+                        <div class="slide bg-contain bg-no-repeat bg-center"
+                            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png);">
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </main>
 
         <main class="px-10 py-4 font-Poppins text-xl leading-8">
             <h1>
-                <strong class="font-Montserrat block tracking-wide"> HOLA !</strong> Soy Erick Matamoros <br />
+                <strong class="font-Montserrat block tracking-wide tagline"> HOLA !</strong> Soy Erick Matamoros <br />
                 Ingeniero en sistemas de computaci&oacuten y desarrollador web
             </h1>
 
-            <p class="text-base mt-2 italic mb-4 underline">Apasionado por el conocimiento y la web</p>
+            <p class="text-base mt-2 italic mb-4 underline punchline">Apasionado por el conocimiento y la web</p>
 
             <a href="#" class="text-sm p-2 bg-gray-900 rounded-sm text-gray-200">Comenzar recorrido</a>
         </main>
 
-        <!-- <div class="absolute bottom-0 right-0 left-0 flex justify-center items-center py-4 text-gray-900 animate-bounce">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div> -->
+        <div class="absolute bottom-0 left-0 right-0 flex py-4 animate-ping justify-center items-center">
+            <a href="#sobremi">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+
+        </div>
+
     </header>
 
-    <section class="h-screen relative flex justify-center items-center bg-gray-200 z-10">
+    <section id="sobremi"
+        class="headline load-hiddden  h-screen relative flex justify-center items-center bg-gray-200 z-10">
         <div class="font-Montserrat">
-            <h2>EN CONSTRUCCION</h2>
+            <h2 class="tagline">EN CONSTRUCCION</h2>
         </div>
     </section>
 
-    <section class="h-screen sticky top-0 flex justify-center items-center bg-gray-200">
-        <div class="font-Montserrat">
-            <h2>EN CONSTRUCCION</h2>
-        </div>
+    <section class="headline load-hiddden h-screen sticky top-0 flex justify-center items-center bg-gray-200">
+
     </section>
+
+    <script>
+        ScrollReveal().reveal('.headline')
+        ScrollReveal().reveal('.tagline', {
+            delay: 500
+        })
+        ScrollReveal().reveal('.punchline', {
+            delay: 2000
+        })
+    </script>
 </body>
 
 </html>
