@@ -1,0 +1,29 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss css/styles.css --output dist/css/styles.css",
+    "watch": "postcss css/styles.css --output dist/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErickDArx/portafolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErickDArx/portafolio/issues"
+  },
+  "homepage": "https://github.com/ErickDArx/portafolio#readme",
+  "description": ""
+}
