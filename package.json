@@ -4,21 +4,22 @@
   "main": "postcss.config.js",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "tailwindcss": "^2.2.7"
+    "express": "^4.17.1"
   },
   "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
     "autoprefixer": "^10.3.1",
     "nodemon": "^2.0.12",
     "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss src/public/css/app.css --output src/public/css/styles.css",
+    "build": "postcss src/public/css/app.css --output src/public/css/styles.css -w",
     "dev": "nodemon src",
     "start": "node src",
-    "watch": "postcss src/css/styles.css --output src/css/styles.css"
+    "watch": "postcss src/public/css/app.css --output src/views/css/styles.css"
   },
   "repository": {
     "type": "git",
