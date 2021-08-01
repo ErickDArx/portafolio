@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet">
     <link href="/css/scroll.css" rel="stylesheet">
+    <script src="/js/smooth-scroll.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 
@@ -129,7 +130,7 @@
         </main>
 
         <div class="absolute bottom-0 left-0 right-0 flex py-4 animate-pulse justify-center items-center">
-            <a href="#sobremi">
+            <a data-scroll href="#sobremi">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -161,6 +162,17 @@
         })
     </script>
     
+    <script>
+        smoothScroll.init({
+        selector: '[data-scroll]',
+        selectorHeader: null,
+        speed:2000,
+        easing: 'easeInOutCubic',
+        offset: 0,
+        callback: function ( anchor, toggle ) {}
+        });
+      </script>
+
 </body>
 
 </html>
