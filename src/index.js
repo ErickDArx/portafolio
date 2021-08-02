@@ -19,8 +19,3 @@ app.use(require('./routes/index'));
 app.listen(app.get('port'), () => {
     console.log('Server on port', 3000);
 });
-
-// listening the Server
-app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'));
-  });
