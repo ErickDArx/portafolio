@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
@@ -31,5 +32,5 @@
     "url": "https://github.com/ErickDArx/portafolio/issues"
   },
   "homepage": "https://github.com/ErickDArx/portafolio#readme",
-  "description": "Vista dedicada para la demostra mi talento y habilidades"
+  "description": "Vista dedicada para la demostracion de mi talento y habilidades"
 }
