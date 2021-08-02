@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const path = require('path');
+const path = require('path'),
+puerto = process.env.PORT || 5500; // Si está definido en el entorno, usarlo. Si no, el 3000
+
 
 // Configuraciones
-app.set('port', 5500);
+app.set('port', puerto);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','ejs');
@@ -17,5 +19,5 @@ app.use(require('./routes/index'));
 
 // Escuchando al servidor
 app.listen(app.get('port'), () => {
-    console.log('Server on port', 3000);
+    console.log('Server on port', puerto);
 });
