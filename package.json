@@ -5,22 +5,32 @@
   "dependencies": {
     "connect-history-api-fallback": "^1.6.0",
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "vue": "^2.6.14",
+    "webpack": "^5.48.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
     "@tailwindcss/jit": "^0.1.18",
     "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^2.0.12",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "postcss src/public/css/app.css --output src/public/css/styles.css -w",
     "dev": "nodemon src",
     "start": "node src",
-    "watch": "postcss src/public/css/app.css --output src/views/css/styles.css"
+    "webpack": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",

@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
     <header class="headline load-hiddden h-screen relative flex flex-col">
         <div class="py-9 relative sm:py-7">
         </div>
@@ -175,32 +174,7 @@
     <!-- <section class="headline load-hiddden h-screen sticky top-0 flex justify-center items-center bg-gray-200">
     </section> -->
     
-    <script>
-        ScrollReveal().reveal('.headline')
-        ScrollReveal().reveal('.tagline', {
-            delay: 500
-        })
-        ScrollReveal().reveal('.punchline', {
-            delay: 2000
-        })
-    </script>
-
-    <script>
-        smoothScroll.init({
-            selector: '[data-scroll]',
-            selectorHeader: null,
-            speed: 2000,
-            easing: 'easeInOutCubic',
-            offset: 0,
-            callback: function (anchor, toggle) {}
-        });
-    </script>
-
-    <script>
-        var scene = document.getElementById('scene');
-        var parallaxInstance = new Parallax(scene);
-    </script>
-
+    <script src="/js/bundle.js"></script>
 </body>
 
 </html>
