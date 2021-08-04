@@ -4,6 +4,7 @@
   "main": "postcss.config.js",
   "dependencies": {
     "connect-history-api-fallback": "^1.6.0",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^5.13.5",
@@ -18,6 +19,7 @@
     "autoprefixer": "^10.3.1",
     "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
+    "live-server": "^1.2.1",
     "nodemon": "^2.0.12",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",

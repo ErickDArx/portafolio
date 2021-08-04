@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Matamoros | Ingeniero en sistemas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/scroll.css" rel="stylesheet">
+    <script src="/js/smooth-scroll.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="headline load-hiddden relative flex flex-col">
+        <div class="py-9 relative sm:py-7">
+        </div>
+        <nav
+            class="z-10 fixed top-0 right-0 left-0 text-gray-900 backdrop-blur-sm shadow-lg flex px-10 py-4 flex-row justify-between items-center font-Montserrat transition duration-75">
+
+            <div class="absolute inset-0 bg-gray-200 opacity-30"></div>
+            <div class="z-50"><a href="" title="ERICK" class="hover:underline">ERICK</a></div>
+            <ul
+                class="z-50 hidden sm:flex flex-row justify-between gap-5 disabled:hidden invisible sm:visible sm:text-xs lg:text-xs">
+                <li>SOBRE MI</li>
+                <li>PROYECTOS</li>
+                <li>CONOCIMIENTOS</li>
+                <li>CONTACTO</li>
+            </ul>
+
+            <div class="z-50 flex justify-center items-center gap-5 visible sm:hidden">
+                <div
+                    class="flex gap-2 justify-center items-center hover:bg-gray-900 p-2 rounded-sm hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p>ES</p>
+                </div>
+                <div class="visible sm:hidden p-1 transition-all hover:bg-gray-900 hover:text-gray-100 rounded-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="bg-gray-900 header fixed top-0 right-0 left-0 z-50">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="px-10 py-4 mt-4">
+        <div id="app"></div>
+    </main>
+
+    <script src="/js/bundle.js"></script>
+</body>
+
+</html>

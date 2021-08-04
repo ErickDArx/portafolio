@@ -15,22 +15,22 @@ router.get('/details', async (req, res) => {
     res.render('details.html');
 });
 
-router.post('/', async (req, res) =>{
-    const save = new Tech(req.body);
+router.post('/api/details', async (req, res) =>{
+    const save = new tech(req.body);
     await save.save();
     res.json({
         status: 'Elemento guardado'
     });
 });
 
-router.put('/:id', async (req, res) =>{
+router.put('/details:id', async (req, res) =>{
     await tech.findByIdAndUpdate(req.params.id, req.body);
     res.json({
         status: 'Elemento actualizado'
     });
 });
 
-router.delete('/:id', async (req, res) =>{
+router.delete('/details:id', async (req, res) =>{
     await tech.findByIdAndRemove(req.params.id, req.body);
     res.json({
         status: 'Elemento depurado'
