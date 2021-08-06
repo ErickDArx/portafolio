@@ -16,7 +16,7 @@
   \*****************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nclass Tech {\n  constructor(url, titulo, tag) {\n    this.url = url;\n    this.titulo = titulo;\n    this.tag = tag;\n  }\n\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  data() {\n    return {\n      Tech: new Tech()\n    };\n  },\n\n  methods: {\n    addTech() {\n      // Solicitar y enviar datos al servidor\n      // LLamar la API rest\n      fetch(\"/api/details\", {\n        method: \"POST\",\n        body: JSON.stringify(this.Tech),\n        Headers: {\n          'Accept': 'application/json',\n          'Content-Type': 'application/json'\n        }\n      }).then(res => console.log(res));\n      this.Tech = new Tech();\n    }\n\n  }\n});\n\n//# sourceURL=webpack://erick-matamoros/./src/app/components/App.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nvar Tech = function Tech(url, titulo, tag) {\n  _classCallCheck(this, Tech);\n\n  this.url = url;\n  this.titulo = titulo;\n  this.tag = tag;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  data: function data() {\n    return {\n      Tech: new Tech()\n    };\n  },\n  methods: {\n    addTech: function addTech() {\n      // Solicitar y enviar datos al servidor\n      // LLamar la API rest\n      fetch(\"/api/details\", {\n        method: \"POST\",\n        body: JSON.stringify(this.Tech),\n        Headers: {\n          'Accept': 'application/json',\n          'Content-Type': 'application/json'\n        }\n      }).then(function (res) {\n        return console.log(res);\n      });\n      this.Tech = new Tech();\n    }\n  }\n});\n\n//# sourceURL=webpack://erick-matamoros/./src/app/components/App.vue?./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -24,9 +24,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!**************************!*\
   !*** ./src/app/index.js ***!
   \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App.vue */ \"./src/app/components/App.vue\");\n\n\nnew vue__WEBPACK_IMPORTED_MODULE_1__.default({\n  render: h => h(_components_App_vue__WEBPACK_IMPORTED_MODULE_0__.default)\n}).$mount('#app');\nScrollReveal().reveal('.headline');\nScrollReveal().reveal('.tagline', {\n  delay: 500\n});\nScrollReveal().reveal('.punchline', {\n  delay: 2000\n});\nsmoothScroll.init({\n  selector: '[data-scroll]',\n  selectorHeader: null,\n  speed: 2000,\n  easing: 'easeInOutCubic',\n  offset: 0,\n  callback: function (anchor, toggle) {}\n});\nvar scene = document.getElementById('scene');\nvar parallaxInstance = new Parallax(scene);\n\n//# sourceURL=webpack://erick-matamoros/./src/app/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App.vue */ \"./src/app/components/App.vue\");\n/* module decorator */ module = __webpack_require__.hmd(module);\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n\n\nnew vue__WEBPACK_IMPORTED_MODULE_1__.default({\n  render: function render(h) {\n    return h(_components_App_vue__WEBPACK_IMPORTED_MODULE_0__.default);\n  }\n}).$mount(\"#app\");\nScrollReveal().reveal(\".headline\");\nScrollReveal().reveal(\".tagline\", {\n  delay: 500\n});\nScrollReveal().reveal(\".punchline\", {\n  delay: 2000\n});\nsmoothScroll.init({\n  selector: \"[data-scroll]\",\n  selectorHeader: null,\n  speed: 2000,\n  easing: \"easeInOutCubic\",\n  offset: 0,\n  callback: function callback(anchor, toggle) {}\n});\nvar scene = document.getElementById(\"scene\");\nvar parallaxInstance = new Parallax(scene); //Barra de progreso\n\nfunction progressBarScroll() {\n  var winScroll = document.body.scrollTop || document.documentElement.scrollTop,\n      height = document.documentElement.scrollHeight - document.documentElement.clientHeight,\n      scrolled = winScroll / height * 100;\n  document.getElementById(\"progressBar\").style.width = scrolled + \"%\";\n}\n\nwindow.onscroll = function () {\n  progressBarScroll();\n}; // Change article into body in Script\n\n/*! smooth-scroll v10.2.1 | (c) 2016 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */\n\n\n!function (e, t) {\n  \"function\" == typeof define && __webpack_require__.amdO ? define([], t(e)) : \"object\" == (typeof exports === \"undefined\" ? \"undefined\" : _typeof(exports)) ? module.exports = t(e) : e.smoothScroll = t(e);\n}(\"undefined\" != typeof __webpack_require__.g ? __webpack_require__.g : undefined.window || undefined.global, function (e) {\n  \"use strict\";\n\n  var t,\n      n,\n      o,\n      r,\n      a,\n      c,\n      l,\n      i = {},\n      u = \"querySelector\" in document && \"addEventListener\" in e,\n      s = {\n    selector: \"[data-scroll]\",\n    selectorHeader: null,\n    speed: 500,\n    easing: \"easeInOutCubic\",\n    offset: 0,\n    callback: function callback() {}\n  },\n      d = function d() {\n    var e = {},\n        t = !1,\n        n = 0,\n        o = arguments.length;\n    \"[object Boolean]\" === Object.prototype.toString.call(arguments[0]) && (t = arguments[0], n++);\n\n    for (var r = function r(n) {\n      for (var o in n) {\n        Object.prototype.hasOwnProperty.call(n, o) && (t && \"[object Object]\" === Object.prototype.toString.call(n[o]) ? e[o] = d(!0, e[o], n[o]) : e[o] = n[o]);\n      }\n    }; n < o; n++) {\n      var a = arguments[n];\n      r(a);\n    }\n\n    return e;\n  },\n      f = function f(e) {\n    return Math.max(e.scrollHeight, e.offsetHeight, e.clientHeight);\n  },\n      h = function h(e, t) {\n    for (Element.prototype.matches || (Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.oMatchesSelector || Element.prototype.webkitMatchesSelector || function (e) {\n      for (var t = (this.document || this.ownerDocument).querySelectorAll(e), n = t.length; --n >= 0 && t.item(n) !== this;) {\n        ;\n      }\n\n      return n > -1;\n    }); e && e !== document; e = e.parentNode) {\n      if (e.matches(t)) return e;\n    }\n\n    return null;\n  },\n      m = function m(e) {\n    \"#\" === e.charAt(0) && (e = e.substr(1));\n\n    for (var t, n = String(e), o = n.length, r = -1, a = \"\", c = n.charCodeAt(0); ++r < o;) {\n      if (t = n.charCodeAt(r), 0 === t) throw new InvalidCharacterError(\"Invalid character: the input contains U+0000.\");\n      a += t >= 1 && t <= 31 || 127 == t || 0 === r && t >= 48 && t <= 57 || 1 === r && t >= 48 && t <= 57 && 45 === c ? \"\\\\\" + t.toString(16) + \" \" : t >= 128 || 45 === t || 95 === t || t >= 48 && t <= 57 || t >= 65 && t <= 90 || t >= 97 && t <= 122 ? n.charAt(r) : \"\\\\\" + n.charAt(r);\n    }\n\n    return \"#\" + a;\n  },\n      p = function p(e, t) {\n    var n;\n    return \"easeInQuad\" === e && (n = t * t), \"easeOutQuad\" === e && (n = t * (2 - t)), \"easeInOutQuad\" === e && (n = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t), \"easeInCubic\" === e && (n = t * t * t), \"easeOutCubic\" === e && (n = --t * t * t + 1), \"easeInOutCubic\" === e && (n = t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1), \"easeInQuart\" === e && (n = t * t * t * t), \"easeOutQuart\" === e && (n = 1 - --t * t * t * t), \"easeInOutQuart\" === e && (n = t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t), \"easeInQuint\" === e && (n = t * t * t * t * t), \"easeOutQuint\" === e && (n = 1 + --t * t * t * t * t), \"easeInOutQuint\" === e && (n = t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t), n || t;\n  },\n      g = function g(e, t, n) {\n    var o = 0;\n    if (e.offsetParent) do {\n      o += e.offsetTop, e = e.offsetParent;\n    } while (e);\n    return o = Math.max(o - t - n, 0), Math.min(o, v() - b());\n  },\n      b = function b() {\n    return Math.max(document.documentElement.clientHeight, e.innerHeight || 0);\n  },\n      v = function v() {\n    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);\n  },\n      y = function y(e) {\n    return e && \"object\" == (typeof JSON === \"undefined\" ? \"undefined\" : _typeof(JSON)) && \"function\" == typeof JSON.parse ? JSON.parse(e) : {};\n  },\n      O = function O(e) {\n    return e ? f(e) + e.offsetTop : 0;\n  },\n      S = function S(t, n, o) {\n    o || (t.focus(), document.activeElement.id !== t.id && (t.setAttribute(\"tabindex\", \"-1\"), t.focus(), t.style.outline = \"none\"), e.scrollTo(0, n));\n  };\n\n  i.animateScroll = function (n, o, c) {\n    var i = y(o ? o.getAttribute(\"data-options\") : null),\n        u = d(t || s, c || {}, i),\n        f = \"[object Number]\" === Object.prototype.toString.call(n),\n        h = f || !n.tagName ? null : n;\n\n    if (f || h) {\n      var m = e.pageYOffset;\n      u.selectorHeader && !r && (r = document.querySelector(u.selectorHeader)), a || (a = O(r));\n\n      var b,\n          E,\n          I = f ? n : g(h, a, parseInt(u.offset, 10)),\n          H = I - m,\n          A = v(),\n          j = 0,\n          C = function C(t, r, a) {\n        var c = e.pageYOffset;\n        (t == r || c == r || e.innerHeight + c >= A) && (clearInterval(a), S(n, r, f), u.callback(n, o));\n      },\n          M = function M() {\n        j += 16, b = j / parseInt(u.speed, 10), b = b > 1 ? 1 : b, E = m + H * p(u.easing, b), e.scrollTo(0, Math.floor(E)), C(E, I, l);\n      },\n          w = function w() {\n        clearInterval(l), l = setInterval(M, 16);\n      };\n\n      0 === e.pageYOffset && e.scrollTo(0, 0), w();\n    }\n  };\n\n  var E = function E(t) {\n    var r;\n\n    try {\n      r = m(decodeURIComponent(e.location.hash));\n    } catch (t) {\n      r = m(e.location.hash);\n    }\n\n    n && (n.id = n.getAttribute(\"data-scroll-id\"), i.animateScroll(n, o), n = null, o = null);\n  },\n      I = function I(r) {\n    if (0 === r.button && !r.metaKey && !r.ctrlKey && (o = h(r.target, t.selector), o && \"a\" === o.tagName.toLowerCase() && o.hostname === e.location.hostname && o.pathname === e.location.pathname && /#/.test(o.href))) {\n      var a;\n\n      try {\n        a = m(decodeURIComponent(o.hash));\n      } catch (e) {\n        a = m(o.hash);\n      }\n\n      if (\"#\" === a) {\n        r.preventDefault(), n = document.body;\n        var c = n.id ? n.id : \"smooth-scroll-top\";\n        return n.setAttribute(\"data-scroll-id\", c), n.id = \"\", void (e.location.hash.substring(1) === c ? E() : e.location.hash = c);\n      }\n\n      n = document.querySelector(a), n && (n.setAttribute(\"data-scroll-id\", n.id), n.id = \"\", o.hash === e.location.hash && (r.preventDefault(), E()));\n    }\n  },\n      H = function H(e) {\n    c || (c = setTimeout(function () {\n      c = null, a = O(r);\n    }, 66));\n  };\n\n  return i.destroy = function () {\n    t && (document.removeEventListener(\"click\", I, !1), e.removeEventListener(\"resize\", H, !1), t = null, n = null, o = null, r = null, a = null, c = null, l = null);\n  }, i.init = function (n) {\n    u && (i.destroy(), t = d(s, n || {}), r = t.selectorHeader ? document.querySelector(t.selectorHeader) : null, a = O(r), document.addEventListener(\"click\", I, !1), e.addEventListener(\"hashchange\", E, !1), r && e.addEventListener(\"resize\", H, !1));\n  }, i;\n});\n\n//# sourceURL=webpack://erick-matamoros/./src/app/index.js?");
 
 /***/ }),
 
@@ -104,19 +104,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/amd options */
+/******/ 	(() => {
+/******/ 		__webpack_require__.amdO = {};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -141,6 +149,21 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		})();
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/harmony module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.hmd = (module) => {
+/******/ 			module = Object.create(module);
+/******/ 			if (!module.children) module.children = [];
+/******/ 			Object.defineProperty(module, 'exports', {
+/******/ 				enumerable: true,
+/******/ 				set: () => {
+/******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
+/******/ 				}
+/******/ 			});
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -161,7 +184,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/app/index.js");
 /******/ 	
 /******/ })()
