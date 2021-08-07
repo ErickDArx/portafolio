@@ -10,7 +10,7 @@
             type="text"
             name=""
             id=""
-            v-model="Tech.url"
+            v-model="tech.url"
           />
         </div>
         <div class="grid grid-rows-1 grid-cols-2 items-center">
@@ -20,7 +20,7 @@
             type="text"
             name=""
             id=""
-            v-model="Tech.titulo"
+            v-model="tech.titulo"
           />
         </div>
         <div class="grid grid-rows-1 grid-cols-2 items-center">
@@ -30,15 +30,22 @@
             type="text"
             name=""
             id=""
-            v-model="Tech.tag"
+            v-model="tech.tag"
           />
         </div>
 
         <div class="grid grid-cols-2">
           <div></div>
-          <button class="rounded-sm text-md bg-indigo-900 p-2 text-gray-50">
-            Aceptar
-          </button>
+          <div v-if="edit === false">
+            <button class="rounded-sm text-md bg-indigo-900 p-2 text-gray-50">
+              Aceptar
+            </button>
+          </div>
+          <div v-else>
+            <button class="rounded-sm text-md bg-indigo-900 p-2 text-gray-50">
+              Editar
+            </button>
+          </div>
         </div>
       </div>
       <div></div>
@@ -57,7 +64,9 @@
         <img class="col-span-1" v-bind:src="list.url" alt="" />
         <p class="col-span-1">Titulo : {{ list.titulo }}</p>
         <p class="col-span-1">Tag : {{ list.tag }}</p>
-        <div class="text-white col-span-1 block text-center">
+        <div
+          class="text-white col-span-1 justify-center flex flex-col text-center"
+        >
           <button
             @click="deleteTech(list._id)"
             href=""
@@ -66,7 +75,7 @@
             Eliminar
           </button>
           <button
-            @click="updateTech(list._id)"
+            @click="editTech(list._id)"
             href=""
             class="bg-blue-900 p-1 flex text-center"
           >
@@ -80,16 +89,20 @@
 
 <script>
 import axios from "axios";
-
+class Tech {
+  constructor(url, titulo, tag) {
+    this.url = url;
+    this.titulo = titulo;
+    this.tag = tag;
+  }
+}
 export default {
   data() {
     return {
-      Tech: {
-        url: "",
-        titulo: "",
-        tag: "",
-      },
+      tech: new Tech(),
       lists: [],
+      edit: false,
+      idTech: "",
     };
   },
   created() {
@@ -99,26 +112,45 @@ export default {
     addTech() {
       // Solicitar y enviar datos al servidor
       // LLamar la API rest
-      axios
-        .post(
-          "/api/details",
-          {
-            url: this.Tech.url,
-            titulo: this.Tech.titulo,
-            tag: this.Tech.tag,
-          },
-          {
-            headers: {
-              "Content-Type": "application/json",
+      if (this.edit === false) {
+        axios
+          .post(
+            "/api/details",
+            {
+              url: this.tech.url,
+              titulo: this.tech.titulo,
+              tag: this.tech.tag,
             },
-          }
-        )
-        .then((response) => {
-          console.log(response.data);
-        })
-        .then((data) => {
-          this.getTech();
-        });
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          )
+          .then((response) => {
+            console.log(response.data);
+          })
+          .then((data) => {
+            this.getTech();
+          });
+      } else {
+        axios
+          .put(
+            "/api/details/" + this.idTech,
+            {
+              url: this.tech.url,
+              titulo: this.tech.titulo,
+              tag: this.tech.tag,
+            },
+          )
+          .then((response) => {
+            console.log(response.data);
+          })
+          .then((data) => {
+            this.getTech();
+          });
+      }
+
       this.Tech = new Tech();
     },
     getTech() {
@@ -136,14 +168,21 @@ export default {
           this.getTech();
         });
     },
-    updateTech(id) {
+
+    editTech(id) {
       axios
-        .update("/api/details/" + id)
+        .get("/api/details/" + id)
         .then((response) => {
-          this.lists = response.data;
+          this.tech = new Tech(
+            response.data.url,
+            response.data.titulo,
+            response.data.tag
+          );
+          this.idTech = response.data._id;
+          this.edit = true;
         })
         .then((data) => {
-          this.getTech();
+          console.log(data);
         });
     },
   },

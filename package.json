@@ -34,7 +34,8 @@
     "build": "postcss src/public/css/app.css --output src/public/css/styles.css -w",
     "dev": "nodemon src",
     "start": "node src",
-    "webpack": "webpack --mode development --watch"
+    "webpack": "webpack --mode development --watch",
+    "prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
