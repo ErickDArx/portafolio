@@ -1,8 +1,11 @@
-// Atraer las variables de entorno
-require('dotenv').config();
 // Llamar a express y crear el servidor
 const express = require('express');
 const morgan = require('morgan');
+const bodyParser = require("body-parser");
+
+// Atraer las variables de entorno
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const app = express();
 
@@ -21,6 +24,8 @@ app.set('view engine', 'ejs');
 // Middlewares || Procesar acciones en las URL's
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 // Routes 
 app.use(require('./routes/web'));

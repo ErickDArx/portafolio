@@ -1,10 +1,10 @@
 const moongose = require('mongoose');
 const { Schema } = moongose;
 
-const tech = new Schema({
-    url: String,
-    titulo: String,
-    tag: String,
+const Tech = new Schema({
+    url: {type: String, required: false, unique:false},
+    titulo: {type: String, required: false, unique:false},
+    tag: {type: String, required: false, unique:false},
 });
 
-module.exports = moongose.model('Tech', tech);
+module.exports = moongose.model('Tech', Tech);

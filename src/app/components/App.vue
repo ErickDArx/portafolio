@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import axios from "axios";
 class Tech {
   constructor(url, titulo, tag) {
     this.url = url;
@@ -57,21 +58,45 @@ class Tech {
 export default {
   data() {
     return {
-      Tech: new Tech()
-    }
+      Tech:{
+        url: '',
+        titulo: '',
+        tag: ''
+      },
+    };
   },
   methods: {
     addTech() {
       // Solicitar y enviar datos al servidor
       // LLamar la API rest
-      fetch("/api/details", {
-        method: "POST",
-        body: JSON.stringify(this.Tech),
-        Headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        }
-      }).then(res => console.log(res))
+
+      axios
+        .post(
+          "/api/details",
+          {
+            url: this.Tech.url,
+            titulo: this.Tech.titulo,
+            tag: this.Tech.tag
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        });
+
+      // fetch("/api/details", {
+      //   method: "POST",
+      //   body: JSON.stringify(this.Tech),
+      //   Headers: {
+      //     'Accept': 'application/json',
+      //     'Content-Type': 'application/json',
+      //   }
+      // }).then(res => res.json())
+      // .then(data =>console.log(data))
 
       this.Tech = new Tech();
     },

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 //Llamar al modelo
-const tech = require('../models/tech');
+const Tech = require('../models/Tech');
 
 // Routes GET / POST / PUT / DELETE
 
@@ -16,11 +16,14 @@ router.get('/details', async (req, res) => {
 });
 
 router.post('/api/details', async (req, res) =>{
-    const save = new tech(req.body);
-    await save.save();
+
+    const tech = new Tech(req.body);
+    console.log(tech);
+    await tech.save();
     res.json({
         status: 'Elemento guardado'
     });
+
 });
 
 router.put('/details:id', async (req, res) =>{

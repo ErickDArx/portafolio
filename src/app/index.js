@@ -13,17 +13,17 @@ ScrollReveal().reveal(".punchline", {
     delay: 2000,
 });
 
-smoothScroll.init({
-    selector: "[data-scroll]",
-    selectorHeader: null,
-    speed: 2000,
-    easing: "easeInOutCubic",
-    offset: 0,
-    callback: function (anchor, toggle) { },
-});
+// smoothScroll.init({
+//     selector: "[data-scroll]",
+//     selectorHeader: null,
+//     speed: 2000,
+//     easing: "easeInOutCubic",
+//     offset: 0,
+//     callback: function (anchor, toggle) { },
+// });
 
-var scene = document.getElementById("scene");
-var parallaxInstance = new Parallax(scene);
+// var scene = document.getElementById("scene");
+// var parallaxInstance = new Parallax(scene);
 
 //Barra de progreso
 
