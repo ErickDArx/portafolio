@@ -9,7 +9,8 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const app = express();
 
-mongoose.connect(process.env.DB_MONGO)
+mongoose.set('useCreateIndex', true);
+mongoose.connect(process.env.DB_MONGO ,  { useNewUrlParser: true,useUnifiedTopology: true })
 .then(db => console.log('Todo bien'))
 .catch(err =>console.log(err));
 const path = require('path');
