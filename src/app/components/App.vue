@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <form @submit.prevent="addTech" class="grid grid-rows-1 grid-cols-1">
-      <p class="font-Poppins">Seccion de imagenes | Tech</p>
+      <p class="font-Poppins mb-5">Seccion de imagenes | Tech</p>
       <div class="grid grid-cols-1 grid-rows-3 gap-2">
         <div class="grid grid-rows-1 grid-cols-2 items-center">
           <p>URL</p>
@@ -41,42 +41,71 @@
           </button>
         </div>
       </div>
+      <div></div>
     </form>
+
+    <div v-for="list in lists" :key="list._id">
+      <div
+        class="
+          mt-2
+          border-2
+          grid grid-cols-4 grid-rows-1
+          justify-center
+          items-center
+        "
+      >
+        <img class="col-span-1" v-bind:src="list.url" alt="" />
+        <p class="col-span-1">Titulo : {{ list.titulo }}</p>
+        <p class="col-span-1">Tag : {{ list.tag }}</p>
+        <div class="text-white col-span-1 block text-center">
+          <button
+            @click="deleteTech(list._id)"
+            href=""
+            class="bg-red-900 p-1 flex text-center"
+          >
+            Eliminar
+          </button>
+          <button
+            @click="updateTech(list._id)"
+            href=""
+            class="bg-blue-900 p-1 flex text-center"
+          >
+            Actualizar
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-class Tech {
-  constructor(url, titulo, tag) {
-    this.url = url;
-    this.titulo = titulo;
-    this.tag = tag;
-  }
-}
 
 export default {
   data() {
     return {
-      Tech:{
-        url: '',
-        titulo: '',
-        tag: ''
+      Tech: {
+        url: "",
+        titulo: "",
+        tag: "",
       },
+      lists: [],
     };
+  },
+  created() {
+    this.getTech();
   },
   methods: {
     addTech() {
       // Solicitar y enviar datos al servidor
       // LLamar la API rest
-
       axios
         .post(
           "/api/details",
           {
             url: this.Tech.url,
             titulo: this.Tech.titulo,
-            tag: this.Tech.tag
+            tag: this.Tech.tag,
           },
           {
             headers: {
@@ -86,19 +115,36 @@ export default {
         )
         .then((response) => {
           console.log(response.data);
+        })
+        .then((data) => {
+          this.getTech();
         });
-
-      // fetch("/api/details", {
-      //   method: "POST",
-      //   body: JSON.stringify(this.Tech),
-      //   Headers: {
-      //     'Accept': 'application/json',
-      //     'Content-Type': 'application/json',
-      //   }
-      // }).then(res => res.json())
-      // .then(data =>console.log(data))
-
       this.Tech = new Tech();
+    },
+    getTech() {
+      axios.get("/api/details").then((response) => {
+        this.lists = response.data;
+      });
+    },
+    deleteTech(id) {
+      axios
+        .delete("/api/details/" + id)
+        .then((response) => {
+          this.lists = response.data;
+        })
+        .then((data) => {
+          this.getTech();
+        });
+    },
+    updateTech(id) {
+      axios
+        .update("/api/details/" + id)
+        .then((response) => {
+          this.lists = response.data;
+        })
+        .then((data) => {
+          this.getTech();
+        });
     },
   },
 };

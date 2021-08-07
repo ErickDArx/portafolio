@@ -7,12 +7,17 @@ const Tech = require('../models/Tech');
 // Routes GET / POST / PUT / DELETE
 
 router.get('/', async (req, res) => {
-    const Tech = await tech.find();
-    res.json(Tech);
+    const tech = await Tech.find();
+    res.json(tech);
 });
 
 router.get('/details', async (req, res) => {
     res.render('details.html');
+});
+
+router.get('/api/details', async (req, res) => {
+    const tech = await Tech.find();
+    res.json(tech);
 });
 
 router.post('/api/details', async (req, res) =>{
@@ -26,15 +31,15 @@ router.post('/api/details', async (req, res) =>{
 
 });
 
-router.put('/details:id', async (req, res) =>{
+router.put('/details/:id', async (req, res) =>{
     await tech.findByIdAndUpdate(req.params.id, req.body);
     res.json({
         status: 'Elemento actualizado'
     });
 });
 
-router.delete('/details:id', async (req, res) =>{
-    await tech.findByIdAndRemove(req.params.id, req.body);
+router.delete('/api/details/:id', async (req, res) =>{
+    await Tech.findByIdAndRemove(req.params.id, req.body);
     res.json({
         status: 'Elemento depurado'
     });
