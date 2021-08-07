@@ -1,5 +1,7 @@
 # Portafolio de proyectos | **Erick Matamoros Fernández**
 
+Sistema dedicado a administrar el contenido del sitio.
+
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -38,9 +40,11 @@ https://erick-matamoros.herokuapp.com
 
 * Modelos : Son la representacion de una entidad de la base de datos.
 
+* [Tailwind]() : Framework de CSS para el diseño de interfaz del proyecto.
+
 ## Estructura del proyecto
 
-> en construcción
+> El proyecto es 
 
 ## Instalación
 
