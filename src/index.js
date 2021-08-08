@@ -4,6 +4,7 @@ const app = express();
 const routes = require('./routes/web');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const cors = require('cors');
 
 // Atraer las variables de entorno
 require('dotenv').config();
@@ -29,6 +30,8 @@ app.set('view engine', 'ejs');
 // Middlewares || Procesar acciones en las URL's
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(morgan('dev'));
+app.use(cors());
 
 // static files || Enviar archivos al Frontend
 app.use(express.static(__dirname + '/public'));
