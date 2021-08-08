@@ -1,8 +1,6 @@
 // Llamar a express y crear el servidor
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require("body-parser");
-
 // Atraer las variables de entorno
 require('dotenv').config();
 
@@ -15,7 +13,6 @@ mongoose.connect(process.env.DB_MONGO ,  { useNewUrlParser: true,useUnifiedTopol
 .catch(err =>console.log(err));
 const path = require('path');
 const port = process.env.PORT || 8080; // Si está definido en el entorno, usarlo. Si no, el 3000
-
 // Configuraciones
 app.set('port', port);
 app.set('views', path.join(__dirname, 'views/'));
@@ -25,8 +22,6 @@ app.set('view engine', 'ejs');
 // Middlewares || Procesar acciones en las URL's
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended: true}));
-
 
 // Routes 
 app.use(require('./routes/web'));
