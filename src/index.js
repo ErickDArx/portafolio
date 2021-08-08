@@ -1,6 +1,7 @@
 // Llamar a express y crear el servidor
 const express = require('express');
 const morgan = require('morgan');
+const routes = require('./routes/web')
 // Atraer las variables de entorno
 require('dotenv').config();
 
@@ -24,7 +25,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes 
-app.use(require('./routes/web'));
+app.use('/web', routes);
 
 // static files || Enviar archivos al Frontend
 app.use(express.static(__dirname + '/public'));
