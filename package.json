@@ -1,11 +1,11 @@
 {
+  "name": "erick-matamoros",
+  "version": "1.0.0",
   "engines": {
     "node": "14.16.1",
     "npm": "6.14.12"
   },
-  "name": "erick-matamoros",
-  "version": "1.0.0",
-  "main": "postcss.config.js",
+  "main": "app.js",
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
