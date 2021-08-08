@@ -41,7 +41,7 @@
   "scripts": {
     "build": "postcss src/public/css/app.css --output src/public/css/styles.css -w",
     "dev": "nodemon src",
-    "start": "node src",
+    "start": "node src/app.js",
     "webpack": "webpack --mode development --watch",
     "prod": "webpack --mode production"
   },
