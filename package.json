@@ -9,7 +9,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
-    "cjs-loader": "^0.1.0",
     "connect-history-api-fallback": "^1.6.0",
     "core-util-is": "^1.0.2",
     "cors": "^2.8.5",
@@ -41,7 +40,7 @@
   "scripts": {
     "build": "postcss src/public/css/app.css --output src/public/css/styles.css -w",
     "dev": "nodemon src",
-    "start": "node src/app.js",
+    "start": "node src",
     "webpack": "webpack --mode development --watch",
     "prod": "webpack --mode production"
   },
