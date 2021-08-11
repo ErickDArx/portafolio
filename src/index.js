@@ -1,6 +1,5 @@
 // Llamar a express y crear el servidor
 const express = require('express');
-
 const app = express();
 const routes = require('./routes/web');
 const bodyParser = require('body-parser');
@@ -26,7 +25,8 @@ const port = process.env.PORT || 8080; // Si está definido en el entorno, usarl
 app.set('port', port);
 app.set('views', path.join(__dirname, 'views/'));
 app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs');// Middlewares || Procesar acciones en las URL's
+app.set('view engine', 'ejs');
+// Middlewares || Procesar acciones en las URL's
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(cors());
