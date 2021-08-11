@@ -27,16 +27,17 @@ app.set('port', port);
 app.set('views', path.join(__dirname, 'views/'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
+
 // Middlewares || Procesar acciones en las URL's
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(cors());
 
-// static files || Enviar archivos al Frontend
-app.use(express.static(__dirname + '/public'));
-
 // Routes 
-app.use('/',routes);
+app.use('/', routes);
+
+// static files || Enviar archivos al Frontend
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Escuchando al servidor
 app.listen(app.get('port'), () => {
