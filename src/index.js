@@ -1,6 +1,7 @@
 // Llamar a express y crear el servidor
 const express = require('express');
 const app = express();
+
 const routes = require('./routes/web');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -35,7 +36,7 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 // Routes 
-app.use('/', routes);
+app.use('/',routes);
 
 // Escuchando al servidor
 app.listen(app.get('port'), () => {
