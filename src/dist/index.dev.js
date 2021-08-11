@@ -19,14 +19,16 @@ require('dotenv').config(); // Conexion base de datos
 
 var mongoose = require('mongoose');
 
-mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.DB_MONGO, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(function (db) {
-  return console.log('La conexion a la base de datos es correcta');
+var _require = require('./config/db'),
+    DB = _require.DB;
+
+mongoose.Promise = global.Promise;
+mongoose.connect(DB, {
+  useMongoClient: true
+}).then(function () {
+  return console.log('Db is conencted');
 })["catch"](function (err) {
-  return console.log(err);
+  return console.error(err);
 });
 
 var path = require('path'); // Conexion al servidor local

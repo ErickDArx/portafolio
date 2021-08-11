@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 
+
 const routes = require('./routes/web');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -12,10 +13,12 @@ require('dotenv').config();
 
 // Conexion base de datos
 const mongoose = require('mongoose');
-mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.DB_MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(db => console.log('La conexion a la base de datos es correcta'))
-    .catch(err => console.log(err));
+const { DB } = require('./config/db');
+
+mongoose.Promise = global.Promise;
+mongoose.connect(DB, { useMongoClient: true})
+  .then(() => console.log('Db is conencted'))
+  .catch(err => console.error(err));
 
 const path = require('path');
 
