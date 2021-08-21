@@ -32,14 +32,12 @@ var port = process.env.PORT || 8080; // Si está definido en el entorno, usarlo.
 // Configuraciones
 
 app.set('port', port);
-app.set('views', path.join(__dirname, 'views/'));
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'ejs'); // Middlewares || Procesar acciones en las URL's
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use(express["static"](__dirname + '/public')); // Middlewares || Procesar acciones en las URL's
 
 app.use(express.json());
-app.use(morgan('dev')); // Routes 
-// app.use('/', routes);
-// static files || Enviar archivos al Frontend
+app.use(morgan('dev')); // static files || Enviar archivos al Frontend
 
 app.use(express["static"](path.join(__dirname, 'public'))); // Escuchando al servidor
 

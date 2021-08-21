@@ -3,10 +3,8 @@ const express = require('express');
 const app = express();
 const routes = require('./routes/web');
 const morgan = require('morgan');
-
 // Atraer las variables de entorno
 require('dotenv').config();
-
 // Conexion base de datos
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
@@ -21,15 +19,12 @@ const port = process.env.PORT || 8080; // Si está definido en el entorno, usarl
 
 // Configuraciones
 app.set('port', port);
-app.set('views', path.join(__dirname, 'views/'));
-app.engine('html', require('ejs').renderFile);
+app.set('views', path.join(__dirname, 'views') )
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 // Middlewares || Procesar acciones en las URL's
 app.use(express.json());
 app.use(morgan('dev'));
-
-// Routes 
-// app.use('/', routes);
 
 // static files || Enviar archivos al Frontend
 app.use(express.static(path.join(__dirname, 'public')));
